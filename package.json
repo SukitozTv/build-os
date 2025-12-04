@@ -6,7 +6,7 @@
   "scripts": {
     "build:win": "pkg . --targets node20-win-x64 --output build/bridge-win.exe",
     "build:linux": "pkg . --targets node20-linux-x64 --output build/bridge-linux",
-    "build:mac-bin": "pkg . --targets node20-macos-x64 --output build/bridge-macos",
+    "build:mac-bin": "pkg . --targets node18-macos-x64 --output build/bridge-macos"
     "build:dmg": "create-dmg build/bridge-macos --overwrite --out dist --dmg-title 'MinecraftBridge'"
   },
   "devDependencies": {
