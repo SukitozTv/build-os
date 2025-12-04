@@ -1,0 +1,22 @@
+{
+  "name": "lexten-minecraft",
+  "version": "1.0.0",
+  "description": "Local Bridge for Minecraft Modpack Updater",
+  "main": "bridge.js",
+  "scripts": {
+    "start": "node bridge.js",
+    "build": "pkg bridge.js --targets node18-win-x64,node18-macos-x64,node18-linux-x64 --output lexten-minecraft",
+    "build:mac-bin": "pkg . --targets node20-macos-x64 --output build/bridge-macos",
+    "build:dmg": "create-dmg build/bridge-macos --overwrite --out dist --dmg-title \"MinecraftBridge\""
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1",
+    "create-dmg": "^4.0.0"
+  }
+}
